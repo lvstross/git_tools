@@ -1,12 +1,18 @@
 import os
+import subprocess
 
 extraOptions = "(b)-back | (~)-execute any command, (t)-git status"
 
+def cli(cmd):
+  result = subprocess.run(cmd, stdout=subprocess.PIPE)
+  result.stdout
+
 def showStatus():
-  os.system("git status")
+  cli(['git', 'status'])
+
 
 def showBranch():
-  os.system("git branch")
+  cli(['git', 'branch'])
 
 def clear():
   os.system("clear")

@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/python3
 import sys
 from utils import clear, output, manualMode
 from stash import stash_tool
